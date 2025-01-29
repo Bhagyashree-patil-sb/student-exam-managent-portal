@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Exam Portal</title>
+    <link rel="stylesheet" href="../exam-portal-sample/src/css/welcome.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="public/images/logo1.png" alt="Logo">
+                <h1>Sharnbasva University</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="public/login.html">Login</a></li>
+                    <li><a href="#" class="exam-link">Exam</a></li>
+                    <li><a href="#" class="result-link">Result</a></li>
+                </ul>
+            </nav>
+            <div class="login-prompt">
+                <div class="modal-content">
+                    <p>Please log in first to view the exam results.</p>
+                    <button class="login-btn" id="loginButton">Login</button>
+                    <button id="cancelButton">Cancel</button>
+                </div>
+            </div>
+            <!-- Hamburger Icon for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="welcome-container">
+            <h1>Welcome to the Student Exam Portal</h1>
+            <p>Prepare for your exam and track your progress</p>
+            <a href="public/login.html" class="btn">Login</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Sharnbasva University. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="src/js/welcome.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#exam-container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #3aace0;
+}
+
+#timer {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: red;
+    text-align: center;
+}
+
+#next-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#next-button:hover {
+    background-color: #007bb5;
+}
+
+#options-container button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#options-container button:hover {
+    background-color: #4c7714;
+}
+
+#code-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#code-table td {
+    padding: 10px;
+}
+
+.code-line {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+#skip-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#skip-button:hover {
+    background-color: #a16e0f;
+}
+
+@media (max-width: 600px) {
+    #skip-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
