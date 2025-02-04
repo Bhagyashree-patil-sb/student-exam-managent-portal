@@ -1,1 +1,0 @@
-# student-exam-managent-portal
