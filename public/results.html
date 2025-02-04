@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Results</title>
+    <link rel="stylesheet" href="../src/css/results.css">
+</head>
+<body>
+    <div class="results-container">
+        <h1>Exam Results</h1>
+
+        <div class="results-summary">
+            <p><strong>Total Questions:</strong> <span id="total-questions">0</span></p>
+            <p><strong>Correct Answers:</strong> <span id="correct-answers">0</span></p>
+            <p><strong>Score:</strong> <span id="score">0</span> / <span id="total-score">0</span></p>
+        </div>
+
+        <h2>Your Answers</h2>
+
+        <div id="question-answers"></div>
+
+        <div id="skipped-questions"></div>
+
+        <button id="retry-button">Retry Exam</button>
+    </div>
+
+    <script src="../src/js/results.js"></script>
+</body>
+</html>

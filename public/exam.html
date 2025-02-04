@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java MCQ Exam</title>
+    <link rel="stylesheet" href="../src/css/exam.css">
+</head>
+<body>
+    
+    <!-- Background Video -->
+    <video id="video-background" autoplay muted loop>
+        <source src="images/Exam-Time.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Modal for Exam Instructions -->
+    <header>
+        <div id="student-info">
+            <!-- Profile photo -->
+            <div id="profile-photo">
+                <img src="images/PROFILE.png" alt="Profile Photo" id="profile-img">
+            </div>
+            <!-- Student details -->
+            <div id="student-details">
+                <p id="student-name"></p>
+                <p id="student-usn"></p>
+                <p id="father-name"></p>
+            </div>
+        </div>
+    </header>
+
+    <div id="start-modal" class="modal">
+        <div class="modal-content">
+            <h2>Important Exam Instructions</h2>
+            <p>You have 20 minutes to complete Part-A and 10 minutes for Part-B.</p>
+            <p>You cannot go back to previous questions and there will be no retest after submitting the exam.</p>
+            <button id="start-btn">Start Exam</button>
+        </div>
+    </div>
+
+    <!-- Question Section -->
+    <h2 id="question-text">Loading...</h2>
+    <div id="options-container"></div>
+    
+    <!-- Timer -->
+    <div id="timer" aria-live="assertive" aria-atomic="true" role="timer">
+        Time Remaining: 20:00
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div id="action-buttons">
+        <button id="next-button">Next Question</button>
+        <button id="skip-button">Skip Question</button>
+    </div>
+
+    <script src="../src/js/exam.js"></script>
+    <script>
+        // Fetch student data from localStorage
+        const studentData = JSON.parse(localStorage.getItem('loggedInStudent'));
+
+        // If student data exists, show the details
+        if (studentData) {
+            document.getElementById('student-name').textContent = 'Name: ' + studentData.name;
+            document.getElementById('student-usn').textContent = 'USN: ' + studentData.usn;
+            document.getElementById('father-name').textContent = 'Father\'s Name: ' + studentData.fatherName;
+
+            // Set the profile photo
+            const profileImg = document.getElementById('profile-img');
+            profileImg.src = 'images/default-profile.jpg'; // Default photo for all students
+            profileImg.alt = `${studentData.name}'s Profile Photo`;
+        } else {
+            // If no student data is found in localStorage, redirect to login page
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
