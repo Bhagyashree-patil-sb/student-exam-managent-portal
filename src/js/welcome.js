@@ -31,7 +31,7 @@ function closeLoginPrompt() {
         loginPrompt.style.opacity = '0';
         setTimeout(() => {
             loginPrompt.style.visibility = 'hidden';
-        }, 300); 
+        }, 300);
     }
 }
 
