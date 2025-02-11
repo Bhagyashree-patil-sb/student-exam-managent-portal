@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/images/title-logo.jpeg" type="image/jpeg">
+    <title>Login - Examination Portal</title>
+    <link rel="stylesheet" href="../src/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+ 
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="../public/images/Login.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+  
+    <div class="login-container">
+        <h2>Examination Portal</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="usn">USN:</label>
+                <select id="usn" name="usn" required>
+                    <option value="">Select USN</option>
+                    
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="name">Name (Optional):</label>
+                <input type="text" id="name" name="name" disabled>
+            </div>
+
+            <div class="input-group">
+                <label for="father-name">Father's Name:</label>
+                <input type="text" id="father-name" name="father-name" disabled>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+             
+            <div id="error-message" class="error-message">Invalid USN or Password!</div>
+        </form>
+    </div>
+
+    <script src="../src/js/login.js"></script>
+</body>
+</html>

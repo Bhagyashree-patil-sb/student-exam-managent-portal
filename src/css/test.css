@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#bg-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#progress-bar {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#progress-bar .progress {
+    height: 10px;
+    background-color: #4CAF50;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+header h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+#question-container {
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 20px;
+    background-color: #ecf0f11e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #34495e;
+}
+
+ul li input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: #dcdde1;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+#time {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 14px 28px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    margin: 15px 10px;
+    width: 150px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button#skip-btn {
+    background-color: #f39c12;
+}
+
+button#skip-btn:hover {
+    background-color: #e67e22;
+}
+
+button#next-btn {
+    background-color: #2980b9;
+}
+
+button#next-btn:hover {
+    background-color: #1f6fa5;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 30px;
+        background-color: #dcdde183;
+    }
+
+    header h2 {
+        font-size: 28px;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+        width: 120px;
+    }
+
+    #question-container {
+        padding: 15px;
+    }
+
+    #progress-bar {
+        margin-top: 10px;
+    }
+
+    #time {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    header h2 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100px;
+    }
+
+    #question-container {
+        padding: 10px;
+    }
+
+    #code-answer {
+        height: 300px;
+    }
+
+    #time {
+        font-size: 14px;
+    }
+
+    #progress-bar {
+        margin-top: 5px;
+    }
+}
+
+#code-answer {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: Consolas, Monaco, monospace;
+    border-radius: 8px;
+    background-color: #f9f9f9af;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+#code-answer:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+#code-question-container {
+    background-color: #ecf0f17a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#code-question-container h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 10px;
+}

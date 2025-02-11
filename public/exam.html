@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/images/title-logo.jpeg" type="image/jpeg">
+    <title>Java Exam - Examination Portal</title>
+    <link rel="stylesheet" href="../src/css/exam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+   
+    <video autoplay muted loop id="background-video">
+        <source src="images/Exam-Time.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="exam-container">
+        <h2>Welcome, <span id="student-name"></span></h2>
+        <p><strong>USN:</strong> <span id="student-usn"></span></p>
+        <p><strong>Father's Name:</strong> <span id="student-father"></span></p>
+
+        <h3>Exam Instructions:</h3>
+        <ul>
+            <li>Part A: 10 Multiple Choice Questions (MCQs).</li>
+            <li>Part B: 3 Coding Questions.</li>
+            <li>Submit before the time limit.</li>
+        </ul>
+        <div id="timer-container">
+            <p id="timer">40:00</p>
+        </div>
+        
+        <h3>Part A: Multiple Choice Questions (MCQs)</h3>
+        <form id="exam-form">
+            <div id="mcq-questions"></div>
+
+            <h3>Part B: Coding Questions</h3>
+            <div id="coding-questions"></div>
+
+            <button type="submit">
+                <i class="fas fa-globe"></i> Submit Exam
+            </button>
+            
+        </form>
+    </div>
+
+    <script src="../src/js/exam.js"></script>
+</body>
+</html>

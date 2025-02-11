@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="public/images/title-logo.jpeg" type="image/jpeg">
+    <title>Online Exam</title>
+    <link rel="stylesheet" href="../src/css/test.css">
+</head>
+<body>
+    <div class="video-background">
+        <video id="bg-video" autoplay loop muted>
+            <source src="images/Exam-Time.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content">
+        <header>
+            <h2>Welcome, <span id="student-name">[Student Name]</span></h2>
+            <p>USN: <span id="usn">[USN]</span></p>
+            <p>Father's Name: <span id="father-name">[Father's Name]</span></p>
+        </header>
+
+        <div id="exam-container">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>You have Part-A 1 minute per question.</li>
+                <li>You have Part-B 10 minute per question.</li>
+                <li>Click "Next" to move to the next question.</li>
+                <li>Click "Skip" to skip the current question.</li>
+                <li>Your progress will be saved automatically.</li>
+            </ul>
+
+            <div id="question-container">
+                <form id="quiz-form">
+                    <h3>Part A: Multiple-Choice Questions (30 Marks)</h3>
+
+                    <div class="question">
+                        <p>1. What is the default value of a boolean variable in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q1" value="A"> A) true</label><br>
+                        <label><input type="radio" name="q1" value="B"> B) false</label><br>
+                        <label><input type="radio" name="q1" value="C"> C) null</label><br>
+                        <label><input type="radio" name="q1" value="D"> D) 0</label>
+                    </div>
+
+                    <div class="question">
+                        <p>2. Which of the following is a valid way to declare a method in Java that does not return any value? (3 Marks)</p>
+                        <label><input type="radio" name="q2" value="A"> A) public void myMethod() {}</label><br>
+                        <label><input type="radio" name="q2" value="B"> B) public return void myMethod() {}</label><br>
+                        <label><input type="radio" name="q2" value="C"> C) public void return myMethod() {}</label><br>
+                        <label><input type="radio" name="q2" value="D"> D) void public myMethod() {}</label>
+                    </div>
+
+                    <div class="question">
+                        <p>3. Which of the following is NOT a valid primitive data type in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q3" value="A"> A) int</label><br>
+                        <label><input type="radio" name="q3" value="B"> B) double</label><br>
+                        <label><input type="radio" name="q3" value="C"> C) string</label><br>
+                        <label><input type="radio" name="q3" value="D"> D) char</label>
+                    </div>
+
+                    <div class="question">
+                        <p>4. Which of the following is used to declare a constant in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q4" value="A"> A) const</label><br>
+                        <label><input type="radio" name="q4" value="B"> B) final</label><br>
+                        <label><input type="radio" name="q4" value="C"> C) static</label><br>
+                        <label><input type="radio" name="q4" value="D"> D) immutable</label>
+                    </div>
+
+                    <div class="question">
+                        <p>5. What is the size of an int in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q5" value="A"> A) 8 bits</label><br>
+                        <label><input type="radio" name="q5" value="B"> B) 16 bits</label><br>
+                        <label><input type="radio" name="q5" value="C"> C) 32 bits</label><br>
+                        <label><input type="radio" name="q5" value="D"> D) 64 bits</label>
+                    </div>
+
+                    <div class="question">
+                        <p>6. Which keyword is used to create a new instance of a class in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q6" value="A"> A) new</label><br>
+                        <label><input type="radio" name="q6" value="B"> B) class</label><br>
+                        <label><input type="radio" name="q6" value="C"> C) create</label><br>
+                        <label><input type="radio" name="q6" value="D"> D) instance</label>
+                    </div>
+
+                    <div class="question">
+                        <p>7. Which of the following is NOT a valid type of loop in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q7" value="A"> A) for</label><br>
+                        <label><input type="radio" name="q7" value="B"> B) while</label><br>
+                        <label><input type="radio" name="q7" value="C"> C) do-while</label><br>
+                        <label><input type="radio" name="q7" value="D"> D) until</label>
+                    </div>
+
+                    <div class="question">
+                        <p>8. What does JVM stand for in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q8" value="A"> A) Java Virtual Machine</label><br>
+                        <label><input type="radio" name="q8" value="B"> B) Java Variable Method</label><br>
+                        <label><input type="radio" name="q8" value="C"> C) Java Verification Model</label><br>
+                        <label><input type="radio" name="q8" value="D"> D) Java View Mode</label>
+                    </div>
+
+                    <div class="question">
+                        <p>9. Which of the following is NOT a valid way to declare a variable in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q9" value="A"> A) int x = 5;</label><br>
+                        <label><input type="radio" name="q9" value="B"> B) int 5x = 5;</label><br>
+                        <label><input type="radio" name="q9" value="C"> C) double y = 10.5;</label><br>
+                        <label><input type="radio" name="q9" value="D"> D) String name = "John";</label>
+                    </div>
+
+                    <div class="question">
+                        <p>10. Which method is used to print output to the console in Java? (3 Marks)</p>
+                        <label><input type="radio" name="q10" value="A"> A) printf()</label><br>
+                        <label><input type="radio" name="q10" value="B"> B) println()</label><br>
+                        <label><input type="radio" name="q10" value="C"> C) print()</label><br>
+                        <label><input type="radio" name="q10" value="D"> D) printConsole()</label>
+                    </div>
+
+                    <h3>Part B: Coding Questions (20 Marks)</h3>
+
+                    <div class="question">
+                        <p>1. Write a Java program to find the factorial of a number using recursion. (6 Marks)</p>
+                        <textarea name="q11" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <div class="question">
+                        <p>2. Write a Java program to check whether a given number is prime or not. (6 Marks)</p>
+                        <textarea name="q12" rows="4" cols="50"></textarea>
+                    </div>
+
+                    <div class="question">
+                        <p>3. Write a Java program to reverse a string without using the built-in reverse function. (8 Marks)</p>
+                        <textarea name="q13" rows="4" cols="50"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div id="timer">Time Left: <span id="time">1:00</span></div>
+            
+            <div id="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <div class="buttons">
+                <button id="next-btn">Next</button>
+                <button id="skip-btn">Skip</button>
+            </div>
+
+            <button id="submit-btn">Submit Exam</button>
+        </div>
+    </div>
+
+    <script src="../src/js/test.js"></script>
+</body>
+</html>
