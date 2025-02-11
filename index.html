@@ -3,57 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the Exam Portal</title>
     <link rel="icon" href="public/images/title-logo.jpeg" type="image/jpeg">
-    <link rel="stylesheet" href="src/css/welcome.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> 
+    <title>Java Exam - Examination Portal</title>
+    <link rel="stylesheet" href="../src/css/exam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="public/images/logo1.png" alt="Logo">
-                <h1>Sharnbasva University</h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="public/login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-                    <li><a href="#" class="exam-link"><i class="fas fa-clipboard"></i> Exam</a></li>
-                    <li><a href="#" class="result-link"><i class="fas fa-trophy"></i> Result</a></li>
-                </ul>
-            </nav>
-            <div class="login-prompt">
-                <div class="modal-content">
-                    <p>Please log in first to view the exam results.</p>
-                    <button class="login-btn" id="loginButton">Login</button>
-                    <button id="cancelButton">Cancel</button>
-                </div>
-            </div>
 
-            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+   
+    <video autoplay muted loop id="background-video">
+        <source src="images/Exam-Time.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="exam-container">
+        <h2>Welcome, <span id="student-name"></span></h2>
+        <p><strong>USN:</strong> <span id="student-usn"></span></p>
+        <p><strong>Father's Name:</strong> <span id="student-father"></span></p>
+
+        <h3>Exam Instructions:</h3>
+        <ul>
+            <li>Part A: 10 Multiple Choice Questions (MCQs).</li>
+            <li>Part B: 3 Coding Questions.</li>
+            <li>Submit before the time limit.</li>
+        </ul>
+        <div id="timer-container">
+            <p id="timer">40:00</p>
         </div>
-    </header>
+        
+        <h3>Part A: Multiple Choice Questions (MCQs)</h3>
+        <form id="exam-form">
+            <div id="mcq-questions"></div>
 
-    <div class="main-content">
-        <div class="welcome-container">
-            <h1>Welcome to the Student Exam Portal</h1>
-            <p>Prepare for your exam and track your progress</p>
-            <a href="public/login.html" class="btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <h3>Part B: Coding Questions</h3>
+            <div id="coding-questions"></div>
 
-        </div>
+            <button type="submit">
+                <i class="fas fa-globe"></i> Submit Exam
+            </button>
+            
+        </form>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Sharnbasva University. All rights reserved.</p>
-            <ul class="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
-        </div>
-    </footer>
-
-    <script src="src/js/welcome.js"></script>
+    <script src="../src/js/exam.js"></script>
 </body>
 </html>
